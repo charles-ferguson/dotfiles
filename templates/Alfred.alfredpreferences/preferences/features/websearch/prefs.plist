@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>100001B0-7BCF-4E42-B4CF-B2C426AD3618</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>c</string>
+			<key>text</key>
+			<string>Confluence Search {query}</string>
+			<key>url</key>
+			<string>https://themis.atlassian.net/wiki/dosearchsite.action?queryString={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>4096B8F3-A226-4057-AB40-C6A1E3A26AD4</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>g</string>
+			<key>text</key>
+			<string>Search Clio Github for '{query}'</string>
+			<key>url</key>
+			<string>https://github.com/clio/?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>E27D21EC-9EF3-4B76-B412-BBD0335D3835</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>j</string>
+			<key>text</key>
+			<string>Jira Search {query}</string>
+			<key>url</key>
+			<string>https://themis.atlassian.net/secure/QuickSearch.jspa?searchString={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
