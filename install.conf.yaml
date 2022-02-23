@@ -8,6 +8,7 @@
     ~/.inputrc: inputrc
     ~/.zshrc: zshrc
     ~/.bashrc: bashrc
+    ~/bin_prompt.sh: bin_prompt.sh
 
     ~/.vimrc: vim/vimrc
     ~/.vim/autoload/plug.vim: vim/vim-plug/plug.vim
