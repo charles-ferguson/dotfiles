@@ -23,12 +23,4 @@ export BUNDLE_CLIO__JFROG_IO="$ARTIFACTORY_USERNAME:$ARTIFACTORY_API_KEY"
 export PATH="$PATH:$HOME/repos/git/contrib/git-jump"
 
 
-# fd - cd to selected directory
-fd() {
-  local dir
-  dir=$(find ${1:-.} -path '*/\.*' -prune \
-                  -o -type d -print 2> /dev/null | fzf +m) &&
-  cd "$dir"
-}
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

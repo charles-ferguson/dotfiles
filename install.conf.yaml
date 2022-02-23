@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.inputrc: inputrc
+    ~/.zshrc: zshrc
+    ~/.bashrc: bashrc
+
+    ~/.vimrc: vim/vimrc
+    ~/.vim/autoload/plug.vim: vim/vim-plug/plug.vim
+
+    ~/fzf.d: fzf.d/
+
+    ~/.pryrc: pryrc
+    ~/.gemrc: gemrc
