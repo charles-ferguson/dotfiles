@@ -13,7 +13,12 @@
     ~/.vimrc: vim/vimrc
     ~/.vim/autoload/plug.vim: vim/vim-plug/plug.vim
 
+
     ~/fzf.d: fzf.d/
+
+    ~/.config/gh/config.yml: config_files/config/gh/config.yml
+
+    ~/.docker/config.json: config_files/docker_config.json
 
     ~/.pryrc: pryrc
     ~/.gemrc: gemrc

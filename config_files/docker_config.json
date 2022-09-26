@@ -1,0 +1,22 @@
+{
+  "auths": {
+    "076945025318.dkr.ecr.us-west-2.amazonaws.com": {},
+    "368549297841.dkr.ecr.ca-central-1.amazonaws.com": {},
+    "368549297841.dkr.ecr.eu-west-1.amazonaws.com": {},
+    "368549297841.dkr.ecr.us-east-1.amazonaws.com": {},
+    "410045895482.dkr.ecr.us-east-1.amazonaws.com": {},
+    "clio-peng-docker-dev-local.jfrog.io": {},
+    "clio-product-docker-dev-local.jfrog.io": {},
+    "docker.pkg.github.com": {},
+    "https://docker.pkg.github.com": {}
+  },
+  "credHelpers": {
+    "076945025318.dkr.ecr.us-west-2.amazonaws.com": "ecr-login-devcycle",
+    "368549297841.dkr.ecr.ca-central-1.amazonaws.com": "ecr-login-logging",
+    "368549297841.dkr.ecr.eu-west-1.amazonaws.com": "ecr-login-logging",
+    "368549297841.dkr.ecr.us-east-1.amazonaws.com": "ecr-login-logging",
+    "797110900418.dkr.ecr.us-west-2.amazonaws.com": "ecr-login-production"
+  },
+  "credsStore": "desktop",
+  "stackOrchestrator": "swarm"
+}
