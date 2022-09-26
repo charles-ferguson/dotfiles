@@ -14,12 +14,15 @@
     ~/.vimrc: vim/vimrc
     ~/.vim/autoload/plug.vim: vim/vim-plug/plug.vim
 
-
     ~/fzf.d: fzf.d/
 
     ~/.config/gh/config.yml: config_files/config/gh/config.yml
+    ~/.gitconfig: config_files/gitconfig
 
     ~/.docker/config.json: config_files/docker_config.json
+    /usr/local/bin/docker-credential-ecr-login-devcycle: shims/docker-credential-ecr-login-devcycle
+    /usr/local/bin/docker-credential-ecr-login-logging: shims/docker-credential-ecr-login-logging
+    /usr/local/bin/docker-credential-ecr-login-production: shims/docker-credential-ecr-login-production
 
     ~/.pryrc: pryrc
     ~/.gemrc: gemrc

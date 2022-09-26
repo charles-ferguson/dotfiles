@@ -1,0 +1,34 @@
+[push]
+	default = matching
+[user]
+	name = Charles Ferguson
+	email = charles.ferguson@clio.com
+[alias]
+	b = branch
+	cb = rev-parse --symbolic-full-name --abbrev-ref HEAD
+	cm = commit --verbose
+	co = checkout
+	cob = checkout -b
+	d = diff
+	di = diff --cached
+	ds = diff --stat
+	f = fetch
+	fom = fetch origin master:master
+	fum = fetch upstream master:master
+	m = merge
+	lo = log --oneline
+	rom = !git fetch origin master:master && git rebase -i master
+	pom = pull origin master
+	pum = pull upstream master
+	s = status
+[push]
+	default = current
+[core]
+	editor = /usr/bin/vim
+[merge]
+	tool = vimdiff
+[grep]
+	lineNumber = true
+[pull]
+	rebase = true
+	ff = only
