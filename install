@@ -20,16 +20,15 @@ if [[ "${CODESPACES:-}" == 'true' ]]; then
 fi
 
 if [[ $(uname) == 'Darwin' ]] ; then
-  brew tap \
-    homebrew/bundle \
-    homebrew/cask \
-    homebrew/core \
-    homeport/tap \
-    lacework/tap \
-    puppetlabs/puppet \
-    stripe/stripe-cli \
-    snyk/tap \
-    turbot/tap
+  brew tap homebrew/bundle
+  brew tap homebrew/cask
+  brew tap homebrew/core
+  brew tap homeport/tap
+  brew tap lacework/tap
+  brew tap puppetlabs/puppet
+  brew tap stripe/stripe-cli
+  brew tap snyk/tap
+  brew tap turbot/tap
   brew install \
     ansible \
     autoconf \
