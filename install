@@ -16,9 +16,79 @@ git submodule update --init --recursive "${DOTBOT_DIR}"
 
 if [[ "${CODESPACES:-}" == 'true' ]]; then
   apt install -y \
-    vim \
-
+    vim
 fi
 
-if [[ $(uname) == 'Darwin' ]] && [[; then
+if [[ $(uname) == 'Darwin' ]] ; then
+  brew tap \
+    homebrew/bundle \
+    homebrew/cask \
+    homebrew/core \
+    homeport/tap \
+    lacework/tap \
+    puppetlabs/puppet \
+    stripe/stripe-cli \
+    snyk/tap \
+    turbot/tap
+  brew install \
+    ansible \
+    autoconf \
+    aws-iam-authenticator \
+    awscli \
+    colordiff \
+    coreutils \
+    cmake \
+    container-diff \
+    ctags \
+    exercism \
+    eksctl \
+    dive \
+    dyff \
+    fzf \
+    findutils \
+    gh \
+    go \
+    go@1.14 \
+    gosec \
+    git \
+    gnu-getopt \
+    gnu-sed \
+    gnuplot \
+    gnutls \
+    helm \
+    jfrog-cli \
+    jq \
+    jsonnet \
+    kubernetes-cli \
+    kubeval \
+    kustomize \
+    lacework-cli \
+    lego \
+    lua \
+    packer \
+    perl \
+    pipenv \
+    pstree \
+    rbenv \
+    readline \
+    saml2aws \
+    shellcheck \
+    steampipe \
+    telnet \
+    terraform \
+    terraform-docs \
+    terraform@0.13 \
+    terragrunt \
+    terrascan \
+    tflint \
+    the_silver_searcher \
+    tmux \
+    vale \
+    vim \
+    wget \
+    ncurses \
+    nmap \
+    xz \
+    imath \
+    yq
 fi
