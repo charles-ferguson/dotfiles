@@ -1,6 +1,5 @@
 # === EDITOR ===
 Pry.editor = 'vi'
-require 'awesome_print'
 
 # == Pry-Nav - Using pry as a debugger ==
 Pry.commands.alias_command 'c', 'continue' rescue nil
@@ -12,9 +11,12 @@ Pry.commands.alias_command 'n', 'next' rescue nil
 # Pry.prompt = [proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " }, proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }]
 BLACK = "\001\e[0;30m\002"
 WHITE = "\001\e[0m\002"
-Pry.prompt = [
+Pry.config.prompt = Pry::Prompt.new(
+  "custom",
+  "my custom prompt",
+  [
     proc { |target_self, nest_level, pry|
-      line_num = pry.input_array.size
+      line_num = pry.input_ring.size
       prompt = "#{line_num} "
       "#{BLACK}#{prompt}#{WHITE}"
     },
@@ -23,7 +25,7 @@ Pry.prompt = [
       "#{BLACK}#{prompt}#{WHITE}"
     }
   ]
-    
+)
 
 # === Listing config ===
 # Better colors - by default the headings for methods are too 
@@ -112,25 +114,25 @@ end
 # === COLOR CUSTOMIZATION ===
 # Everything below this line is for customizing colors, you have to use the ugly
 # color codes, but such is life. 
-CodeRay.scan("example", :ruby).term # just to load necessary files
-# Token colors pulled from: https://github.com/rubychan/coderay/blob/master/lib/coderay/encoders/terminal.rb
-
-$LOAD_PATH << File.dirname(File.realpath(__FILE__))
-
-# In CodeRay >= 1.1.0 token colors are defined as pre-escaped ANSI codes
-if Gem::Version.new(CodeRay::VERSION) >= Gem::Version.new('1.1.0')
-  require "escaped_colors"
-else
-  require "unescaped_colors"
-end
-
-module CodeRay
-  module Encoders
-    class Terminal < Encoder
-      # override old colors
-      TERM_TOKEN_COLORS.each_pair do |key, value|
-        TOKEN_COLORS[key] = value
-      end
-    end
-  end
-end
+# CodeRay.scan("example", :ruby).term # just to load necessary files
+# # Token colors pulled from: https://github.com/rubychan/coderay/blob/master/lib/coderay/encoders/terminal.rb
+#
+# $LOAD_PATH << File.dirname(File.realpath(__FILE__))
+#
+# # In CodeRay >= 1.1.0 token colors are defined as pre-escaped ANSI codes
+# # if Gem::Version.new(CodeRay::VERSION) >= Gem::Version.new('1.1.0')
+# #   require "escaped_colors"
+# # else
+# #   require "unescaped_colors"
+# # end
+# #
+# module CodeRay
+#   module Encoders
+#     class Terminal < Encoder
+#       # override old colors
+#       TERM_TOKEN_COLORS.each_pair do |key, value|
+#         TOKEN_COLORS[key] = value
+#       end
+#     end
+#   end
+# end

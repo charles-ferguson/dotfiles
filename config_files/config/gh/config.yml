@@ -12,3 +12,9 @@ aliases:
     peng-atc: issue create --repo clio/team-peng --project "PEng - ATC" --label "peng:ATC"
     ticket: issue create --repo clio/sec-elk-platform --project SecEng
     team-pr: pr create --reviewer clio/infrastructure-security
+    prs-for: '!gh search prs --owner=clio --limit 100 -- "is:merged" "created:2024-01-01..2025-01-01" "author:${1}"'
+    prs-for-year: '!gh search prs --owner=clio --limit 100 -- "is:merged" "created:${2}-01-01..$((${2}+1))-01-01" "author:${1}"'
+    authored-prs-for-year: '!gh search prs --owner=clio --limit 100 -- "is:merged" "created:${2}-01-01..$((${2}+1))-01-01" "author:${1}"'
+    authored-issues-for-year: '!gh search issues --owner=clio --limit 100 -- "is:merged" "created:${2}-01-01..$((${2}+1))-01-01" "author:${1}"'
+    reviewed-prs-for-year: '!gh search prs --owner=clio --limit 100 -- "is:merged" "created:${2}-01-01..$((${2}+1))-01-01" "reviewed-by:${1}"'
+version: "1"

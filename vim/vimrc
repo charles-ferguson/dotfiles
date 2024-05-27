@@ -31,18 +31,16 @@ Plug 'w0rp/ale'
 Plug 'burnettk/vim-angular'
 Plug 'leafgarland/typescript-vim'
 Plug 'rodjek/vim-puppet'
+Plug 'robbles/logstash.vim'
+Plug 'hashivim/vim-terraform'
 
-Plug 'christoomey/vim-run-interactive'
 Plug 'AndrewRadev/splitjoin.vim'
 
 " Pluging for fzf file finder
 Plug 'junegunn/fzf.vim'
 
-"Plug 'maralla/completor.vim'
-
 Plug 'Yggdroot/indentLine'
 
-Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
 
 Plug 'rizzatti/dash.vim'
@@ -80,8 +78,6 @@ set hlsearch
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
-
-let g:netrw_keepdir=0
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
@@ -174,6 +170,7 @@ nnoremap <Down> :echoe "Use j"<CR>
 
 " Use fzf as file finder
 set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/Cellar/fzf/0.34.0/
 " This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -213,7 +210,7 @@ nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
 let g:rspec_runner = "os_x_iterm2"
-let g:rspec_command = "Dispatch bundle exec rspec {spec}"
+let g:rspec_command = "Dispatch dev test {spec}"
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'

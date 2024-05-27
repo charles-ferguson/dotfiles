@@ -28,6 +28,9 @@ PYTHON_BIN_PATH="${HOME}/Library/Python/3.7/bin"
 PATH="${PYTHON_BIN_PATH}:${PATH}"
 export PATH
 
+# Terragrunt Switch (tgswitch)
+PATH=$PATH:/Users/charlesferugson/bin
+
 # FZF Integration
 if [[ "${SHELL}" =~ "bash" ]]; then
   # shellcheck source=/Users/charlesferguson/.fzf.bash
